@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:l" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:b" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="Schortcun Icon" href="https://www.mgma.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Marta Cattaneo</title>
+    <!--GOOGLE MAPS-->
+    <script>
+            function initialize() {
+            var mapOptions = {
+                zoom: 15,
+                center: new google.maps.LatLng(45.733479,9.147072),
+                mapTypeControl: false,
+                scrollwheel: false,
+                draggable: true,
+                panControl: true,
+                zoomControl: false
+            };
+            var map = new google.maps.Map(document.getElementById('mappa'), mapOptions);
+            var stylez = [
+                    {
+                    featureType: "all",
+                    elementType: "all",
+                    stylers: [
+                        { saturation: -100 } // <-- THIS
+                    ]
+                    }
+                ];
+                var map = new google.maps.Map(document.getElementById("mappa"), mapOptions);
+
+                var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });
+                map.mapTypes.set('Grayscale', mapType);
+                map.setMapTypeId('Grayscale');
+
+                var contentString = '<b>Sono qui</b>';
+
+                var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth: 200
+                });
+
+                var companyImage = new google.maps.MarkerImage('http://demo.themerart.net/newvision/assets/img/icon/marker.png',
+                new google.maps.Size(50,50),
+                new google.maps.Point(0,0),
+                new google.maps.Point(25,25)
+                );
+                var companyPos = new google.maps.LatLng(45.733479,9.147072);
+                var companyMarker = new google.maps.Marker({
+                position: companyPos,
+                map: map,
+                icon: companyImage,
+                title:"mexxio.pl",
+                zIndex: 3000});
+
+                google.maps.event.addDomListener(window, "resize", function() {
+                var center = map.getCenter();
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(center);
+                });
+
+                infowindow.open(map,companyMarker);
+                google.maps.event.addListener(companyMarker, 'click', function() {
+                infowindow.open(map,companyMarker);
+                });
+            }
+            function loadScript() {
+            var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+            document.body.appendChild(script);
+            }
+            window.onload = loadScript;
+    </script>
+
+
+</head>
+<body>
+
+    <!--nav-->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item  a"><a href="index.html">home</a> </li>
+            <li class="navbar-item b"><a href="index.html#about">about </a> </li>
+            <li class="navbar-item a"><a href="index.html#study">studies</a> </li>
+            <li class="navbar-item b"><a href="index.html#photo">photo</a> </li>
+            <li class="navbar-item a"><a href="index.html#skills">skills</a> </li>
+            <li class="navbar-item b"><a href="contact.html">contact</a> </li>
+         </ul>
+    </nav>
+
+    <section class="section-container-contact">
+        <h1 class="contattami"> Contattami </h1>
+        <form name="contacto" method="get" class="form">
+            <span class="form-row">
+                <!--nombre-->
+                <div>
+                    <label for="nombre"></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                </div>
+                                
+                <!--email-->
+                <div>
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="email" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                </div>
+                                
+                <!--telefono-->
+                <div class="form-row">
+                    <label for="telefono"></label>
+                    <input type="tel" name="telefono" placeholder="Telefono" pattern="[0-9]{9}" required>
+                </div>
+                
+                <!--como me has conocido opzioni-->
+                <div>
+                    <select name="opzioni">
+                        <optgroup label="come mi hai conosciuta">
+                            <option> tramite amico </option>
+                            <option> tramite internet</option>
+                            <option>tramite facebook</option>
+                            <option>tramite instagram</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+            </span> 
+                
+                
+            <!--messaggio-->
+            <span class="form-row messaggio">
+                <textarea name="messaggio" id="messaggio" cols="30" rows="10" placeholder="tu mensaje"></textarea>
+                <form method="get">
+                    <input type="submit" value="Enviar" /> 
+                </form>
+            </span>
+        </form>
+    </section>
+    <section class="mappa">
+        <div>
+            <div id="mappa" class="mappa"></div>
+        </div>
+    </section>
+
+     
+    
+</body>
+<!--footer-->
+<footer id="footer" class="footer-c">
+	<p class="footer-text-c">&copy; 2017 - Marta Cattaneo</p>
+</footer>
+</html>
