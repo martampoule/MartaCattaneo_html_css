@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:l" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:b" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="Schortcun Icon" href="https://www.mgma.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <link rel="stylesheet" type="text/css" href="./style/skills.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+     	<!--SKILLS-->
+	<script>
+		jQuery(document).ready(function() {
+		jQuery(".skillbar").each(function() {
+		jQuery(this).find(".skillbar-bar").animate(
+		{width: jQuery(this).attr("data-percent")},
+			6000);});});
+	</script>
+
+    <title>Marta Cattaneo</title>
+
+</head>
+<body>
+    <!--header-->
+    <header class="header">
+        <h1 class="title">Marta Cattaneo</h1>
+        <p class="title-cite">Student in Visual Comunication</p>
+        <div id="title-img-animated" class="header-img"></div>
+    </header>
+    <!--nav-->
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item active a"><a href="">home</a> </li>
+            <li class="navbar-item b"><a href="#about">about </a> </li>
+            <li class="navbar-item a"><a href="#study">studies</a> </li>
+            <li class="navbar-item b"><a href="#photo">photo</a> </li>
+            <li class="navbar-item a"><a href="#skills">skills</a> </li>
+            <li class="navbar-item b"><a href="contact.html">contact</a> </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+    <!--about-->
+        <section id="about" class="section-container">
+            <div class="about">
+                <h1 class="title-about">About me</h1>
+                <span class="paragrafo-about">
+                    Me llamo Marta Cattaneo
+                    y me dedico al grafismo, un trabajo que me 
+                    satisface y me completa. <br> A traves de los diseños graficos 
+                    logro expresar mis pensamientos y mis calidades intrinsecas.
+                </span>
+            </div>
+            <video id="video"  controls class="video">
+                <source src="./vid/pattinaggio.mp4" type="video/mp4">
+            </video>
+            <span class="pattinaggio">
+                Hago patinaje velocidad sobre ruedas de cuando tiengo 7 años. 
+                A lado un video exsplicativo de que es este deporte.
+            </span>
+        </section>
+    <!--study-->
+        <section id="study" class="section-reverse">
+            <div class="study">
+                <h1 class="title-study"> Studies </h1>
+                <span class="paragrafo-study">
+                        Soy una estudiante de la Universidad de
+                        SUPSI, que se encuentra en la ciudad suiza de Lugano. 
+                        Actualmente estoy frecuentando un curso de “Comunicaciòn Visual” 
+                        y desde muchos años mi sueño es de poder estudiar al 
+                        extranjero. Antes de empezar la Universidad he 
+                        conseguido el Diploma de Escuela Secundaria en “Diseño industrial.”
+                </span>
+            </div>
+            <div class="wrap">
+                <div class="content content-a">
+                    <h1>Liceo</h1>
+                    <p>Lice artistico "Fausto Melotti" indirizzo Disegno Industriale, Cantù (IT)</p>
+                </div>
+                <div class="content content-b">
+                    <h1>Università</h1>
+                    <p>SUPSI, bachelore in Comunicazione Visiva, Lugano (CH)</p>
+                </div>
+                <div class="content content-c">
+                    <h1>Erasmus</h1>
+                    <p>UPV, facoltà di Belle Arti, Valencia (ES)</p>
+                </div>
+            </div>
+        </section>
+    <!--photo-->
+        <section id="photo" class="section-container photo-container">
+            <div class="photo">
+                <h1 class="title-photo"> Photo</h1>
+                    <span class="paragrafo-photo">
+                        Soy una estudiante de la Universidad de
+                        SUPSI, que se encuentra en la ciudad suiza de Lugano. 
+                        Actualmente estoy frecuentando un curso de “Comunicaciòn Visual” 
+                        y desde muchos años mi sueño es de poder estudiar al 
+                        extranjero. Antes de empezar la Universidad he 
+                        conseguido el Diploma de Escuela Secundaria en “Diseño industrial.”
+                    </span>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery">
+                    <img src="./gallery/g-1.jpg" alt="" class="g-item-a ">
+                    <img src="./gallery/g-2.jpg" alt="" class="g-item-a">
+                    <img src="./gallery/g-3.jpg" alt="" class="g-item-a">
+                </div>
+                <div class="gallery">
+                    <img src="./gallery/g-4.jpg" alt="" class="g-item-b">
+                    <img src="./gallery/g-5.jpg" alt="" class="g-item-b">
+                    <img src="./gallery/g-6.jpg" alt="" class="g-item-b">
+                </div>
+                <div class="gallery">
+                    <img src="./gallery/g-7.jpg" alt="" class="g-item-c">
+                    <img src="./gallery/g-8.jpg" alt="" class="g-item-c">
+                    <img src="./gallery/g-9.jpg" alt="" class="g-item-c">
+                </div>
+            </div>
+
+            
+        </section>
+        <section id="skills" class="section-reverse">
+            <h1 class="title-skills"> Skills</h1>
+            <div class="skills">
+				<div class="skillbar" data-percent="80%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>Photoshop</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">80%</div>
+				</div> 
+				
+				<div class="skillbar" data-percent="80%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>InDesign</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">80%</div>
+				</div> 
+				
+				<div class="skillbar" data-percent="60%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>Illustrator</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">60%</div>
+				</div> 
+				
+				<div class="skillbar" data-percent="70%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>Premiere</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">70%</div>
+				</div> 
+				
+				<div class="skillbar" data-percent="60%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>AfterEffects</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">60%</div>
+				</div> 
+				
+				<div class="skillbar" data-percent="80%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>Photography</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">80%</div>
+				</div> 
+				
+				<div class="skillbar" data-percent="100%">
+					<div class="skillbar-title" style="background: rgb(0, 0, 0);"><span>Creativity</span></div>
+					<div class="skillbar-bar" style="background: #000000;"></div>
+					<div class="skill-bar-percent">100%</div>
+				</div> 
+			</div>
+        </section>
+
+    </main>
+
+</body>
+
+
+<!--footer-->
+<footer id="footer" class="footer">
+	<p class="footer-text">&copy; 2017 - Marta Cattaneo</p>
+</footer>
+</html>
